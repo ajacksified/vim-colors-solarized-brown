@@ -1,4 +1,4 @@
-solarized-brown Colorscheme for Vim
+solarizedbrown Colorscheme for Vim
 =============================
 
 Based on [solarized](http://ethanschoonover.com/solarized), but with a brown background
@@ -8,39 +8,39 @@ Screenshots
 -----------
 
 ### Dark
-![solarized-brown dark](https://github.com/ajacksified/vim-colors-solarized-brown/raw/master/screenshot-dark.png)
+![solarizedbrown dark](https://github.com/ajacksified/vim-colors-solarizedbrown/raw/master/screenshot-dark.png)
 
 ### Light
-![solarized-brown light](https://github.com/ajacksified/vim-colors-solarized-brown/raw/master/screenshot-light.png)
+![solarizedbrown light](https://github.com/ajacksified/vim-colors-solarizedbrown/raw/master/screenshot-light.png)
 
 Installation
 ------------
 
 ### Option 1: Manual installation
 
-1.  Move `solarized-brown.vim` to your `.vim/colors` directory. After downloading the 
+1.  Move `solarizedbrown.vim` to your `.vim/colors` directory. After downloading the 
     vim script or package:
 
-        $ cd vim-colors-solarized-brown/colors
-        $ mv solarized-brown.vim ~/.vim/colors/
+        $ cd vim-colors-solarizedbrown/colors
+        $ mv solarizedbrown.vim ~/.vim/colors/
 
 ### Option 2: Pathogen installation ***(recommended)***
 
 1.  Download and install Tim Pope's [Pathogen].
 
-2.  Next, move or clone the `vim-colors-solarized-brown` directory so that it is 
+2.  Next, move or clone the `vim-colors-solarizedbrown` directory so that it is 
     a subdirectory of the `.vim/bundle` directory.
 
     a. **Clone:** 
 
             $ cd ~/.vim/bundle
-            $ git clone git://github.com/ajacksified/vim-colors-solarized-brown.git
+            $ git clone git://github.com/ajacksified/vim-colors-solarizedbrown.git
 
     b. **Move:**
 
-        In the parent directory of vim-colors-solarized-brown:
+        In the parent directory of vim-colors-solarizedbrown:
         
-            $ mv vim-colors-solarized-brown ~/.vim/bundle/
+            $ mv vim-colors-solarizedbrown ~/.vim/bundle/
 
 Solarized
 ---------

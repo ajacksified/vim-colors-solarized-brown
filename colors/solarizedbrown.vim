@@ -1,6 +1,6 @@
-" Name:     Solarized vim colorscheme
+" Name:     SolarizedBrown vim colorscheme
 " Author:   Ethan Schoonover <es@ethanschoonover.com>
-" URL:      http://ethanschoonover.com/solarized
+" URL:      http://ethanschoonover.com/solarizedbrown
 "           (see this url for latest release & screenshots)
 " License:  OSI approved MIT license (see end of this file)
 " Created:  In the middle of the night
@@ -11,7 +11,7 @@
 " ---------------------------------------------------------------------
 " ABOUT:
 " ---------------------------------------------------------------------
-" Solarized is a carefully designed selective contrast colorscheme with dual
+" SolarizedBrown is a carefully designed selective contrast colorscheme with dual
 " light and dark modes that runs in both GUI, 256 and 16 color modes.
 "
 " See the homepage above for screenshots and details.
@@ -19,10 +19,10 @@
 " ---------------------------------------------------------------------
 " OPTIONS:
 " ---------------------------------------------------------------------
-" See the "solarized.txt" help file included with this colorscheme (in the 
+" See the "solarizedbrown.txt" help file included with this colorscheme (in the 
 " "doc" subdirectory) for information on options, usage, the Toggle Background 
-" function and more. If you have already installed Solarized, this is available 
-" from the Solarized menu and command line as ":help solarized"
+" function and more. If you have already installed SolarizedBrown, this is available 
+" from the SolarizedBrown menu and command line as ":help solarizedbrown"
 "
 " ---------------------------------------------------------------------
 " INSTALLATION:
@@ -32,9 +32,9 @@
 " MANUAL INSTALLATION OPTION:
 " ---------------------------------------------------------------------
 "
-" 1.  Download the solarized distribution (available on the homepage above)
+" 1.  Download the solarizedbrown distribution (available on the homepage above)
 "     and unarchive the file.
-" 2.  Move `solarized.vim` to your `.vim/colors` directory.
+" 2.  Move `solarizedbrown.vim` to your `.vim/colors` directory.
 " 3.  Move each of the files in each subdirectories to the corresponding .vim
 "     subdirectory (e.g. autoload/togglebg.vim goes into your .vim/autoload 
 "     directory as .vim/autoload/togglebg.vim).
@@ -45,18 +45,18 @@
 " 1.  Download and install Tim Pope's Pathogen from:
 "     https://github.com/tpope/vim-pathogen
 "
-" 2.  Next, move or clone the `vim-colors-solarized` directory so that it is
+" 2.  Next, move or clone the `vim-colors-solarizedbrown` directory so that it is
 "     a subdirectory of the `.vim/bundle` directory.
 "
 "     a. **clone with git:**
 "
 "       $ cd ~/.vim/bundle
-"       $ git clone git://github.com/altercation/vim-colors-solarized.git
+"       $ git clone git://github.com/altercation/vim-colors-solarizedbrown.git
 "
 "     b. **or move manually into the pathogen bundle directory:**
-"         In the parent directory of vim-colors-solarized:
+"         In the parent directory of vim-colors-solarizedbrown:
 "
-"         $ mv vim-colors-solarized ~/.vim/bundle/
+"         $ mv vim-colors-solarizedbrown ~/.vim/bundle/
 "
 " MODIFY VIMRC:
 "
@@ -65,13 +65,13 @@
 "
 "     syntax enable
 "     set background=dark
-"     colorscheme solarized
+"     colorscheme solarizedbrown
 "
-" or, for the light background mode of Solarized:
+" or, for the light background mode of SolarizedBrown:
 "
 "     syntax enable
 "     set background=light
-"     colorscheme solarized
+"     colorscheme solarizedbrown
 "
 " I like to have a different background in GUI and terminal modes, so I can use
 " the following if-then. However, I find vim's background autodetection to be
@@ -84,13 +84,13 @@
 "       set background=dark
 "     endif
 "
-" See the Solarized homepage at http://ethanschoonover.com/solarized for
+" See the SolarizedBrown homepage at http://ethanschoonover.com/solarizedbrown for
 " screenshots which will help you select either the light or dark background.
 "
 " ---------------------------------------------------------------------
 " COLOR VALUES
 " ---------------------------------------------------------------------
-" Download palettes and files from: http://ethanschoonover.com/solarized
+" Download palettes and files from: http://ethanschoonover.com/solarizedbrown
 "
 " L\*a\*b values are canonical (White D65, Reference D50), other values are
 " matched in sRGB space.
@@ -160,22 +160,22 @@ endif
 " Default option values"{{{
 " ---------------------------------------------------------------------
 " s:options_list is used to autogenerate a list of all non-default options 
-" using "call SolarizedOptions()" or with the "Generate .vimrc commands" 
-" Solarized menu option. See the "Menus" section below for the function itself.
+" using "call SolarizedBrownOptions()" or with the "Generate .vimrc commands" 
+" SolarizedBrown menu option. See the "Menus" section below for the function itself.
 let s:options_list=[
-            \'" this block of commands has been autogenerated by solarized.vim and',
-            \'" includes the current, non-default Solarized option values.',
+            \'" this block of commands has been autogenerated by solarizedbrown.vim and',
+            \'" includes the current, non-default SolarizedBrown option values.',
             \'" To use, place these commands in your .vimrc file (replacing any',
-            \'" existing colorscheme commands). See also ":help solarized"',
+            \'" existing colorscheme commands). See also ":help solarizedbrown"',
             \'',
             \'" ------------------------------------------------------------------',
-            \'" Solarized Colorscheme Config',
+            \'" SolarizedBrown Colorscheme Config',
             \'" ------------------------------------------------------------------',
             \]
 let s:colorscheme_list=[
             \'syntax enable',
             \'set background='.&background,
-            \'colorscheme solarized',
+            \'colorscheme solarizedbrown',
             \]
 let s:defaults_list=[
             \'" ------------------------------------------------------------------',
@@ -197,20 +197,20 @@ function! s:SetOption(name,default)
         let l:wrap='"'
         let l:ewrap='\"'
     endif
-    if !exists("g:solarized_".a:name) || g:solarized_{a:name}==a:default
-        exe 'let g:solarized_'.a:name.'='.l:wrap.a:default.l:wrap.'"'
-        exe 'call add(s:defaults_list, "\" let g:solarized_'.a:name.'='.l:ewrap.g:solarized_{a:name}.l:ewrap.'")'
+    if !exists("g:solarizedbrown_".a:name) || g:solarizedbrown_{a:name}==a:default
+        exe 'let g:solarizedbrown_'.a:name.'='.l:wrap.a:default.l:wrap.'"'
+        exe 'call add(s:defaults_list, "\" let g:solarizedbrown_'.a:name.'='.l:ewrap.g:solarizedbrown_{a:name}.l:ewrap.'")'
     else
-        exe 'call add(s:options_list,  "let g:solarized_'.a:name.'='.l:ewrap.g:solarized_{a:name}.l:ewrap.'    \"default value is '.a:default.'")'
+        exe 'call add(s:options_list,  "let g:solarizedbrown_'.a:name.'='.l:ewrap.g:solarizedbrown_{a:name}.l:ewrap.'    \"default value is '.a:default.'")'
     endif
 endfunction
 
 if ($TERM_PROGRAM ==? "apple_terminal" && &t_Co < 256)
-    let s:solarized_termtrans_default = 1
+    let s:solarizedbrown_termtrans_default = 1
 else
-    let s:solarized_termtrans_default = 0
+    let s:solarizedbrown_termtrans_default = 0
 endif
-call s:SetOption("termtrans",s:solarized_termtrans_default)
+call s:SetOption("termtrans",s:solarizedbrown_termtrans_default)
 call s:SetOption("degrade",0)
 call s:SetOption("bold",1)
 call s:SetOption("underline",1)
@@ -229,7 +229,7 @@ hi clear
 if exists("syntax_on")
   syntax reset
 endif
-let colors_name = "solarized"
+let colors_name = "solarizedbrown"
 
 "}}}
 " GUI & CSApprox hexadecimal palettes"{{{
@@ -238,9 +238,9 @@ let colors_name = "solarized"
 " Set both gui and terminal color values in separate conditional statements
 " Due to possibility that CSApprox is running (though I suppose we could just
 " leave the hex values out entirely in that case and include only cterm colors)
-" We also check to see if user has set solarized (force use of the
+" We also check to see if user has set solarizedbrown (force use of the
 " neutral gray monotone palette component)
-if (has("gui_running") && g:solarized_degrade == 0)
+if (has("gui_running") && g:solarizedbrown_degrade == 0)
     let s:vmode       = "gui"
     let s:base03      = "#261300"
     let s:base02      = "#2e1905"
@@ -259,9 +259,9 @@ if (has("gui_running") && g:solarized_degrade == 0)
     let s:cyan        = "#2aa198"
     "let s:green       = "#859900" "original
     let s:green       = "#719e07" "experimental
-elseif (has("gui_running") && g:solarized_degrade == 1)
+elseif (has("gui_running") && g:solarizedbrown_degrade == 1)
     " These colors are identical to the 256 color mode. They may be viewed
-    " while in gui mode via "let g:solarized_degrade=1", though this is not
+    " while in gui mode via "let g:solarizedbrown_degrade=1", though this is not
     " recommened and is for testing only.
     let s:vmode       = "gui"
     let s:base03      = "#1c1c1c"
@@ -280,7 +280,7 @@ elseif (has("gui_running") && g:solarized_degrade == 1)
     let s:blue        = "#0087ff"
     let s:cyan        = "#00afaf"
     let s:green       = "#5f8700"
-elseif g:solarized_termcolors != 256 && &t_Co >= 16
+elseif g:solarizedbrown_termcolors != 256 && &t_Co >= 16
     let s:vmode       = "cterm"
     let s:base03      = "8"
     let s:base02      = "0"
@@ -298,7 +298,7 @@ elseif g:solarized_termcolors != 256 && &t_Co >= 16
     let s:blue        = "4"
     let s:cyan        = "6"
     let s:green       = "2"
-elseif g:solarized_termcolors == 256
+elseif g:solarizedbrown_termcolors == 256
     let s:vmode       = "cterm"
     let s:base03      = "234"
     let s:base02      = "235"
@@ -319,22 +319,6 @@ elseif g:solarized_termcolors == 256
 else
     let s:vmode       = "cterm"
     let s:bright      = "* term=bold cterm=bold"
-"   let s:base03      = "0".s:bright
-"   let s:base02      = "0"
-"   let s:base01      = "2".s:bright
-"   let s:base00      = "3".s:bright
-"   let s:base0       = "4".s:bright
-"   let s:base1       = "6".s:bright
-"   let s:base2       = "7"
-"   let s:base3       = "7".s:bright
-"   let s:yellow      = "3"
-"   let s:orange      = "1".s:bright
-"   let s:red         = "1"
-"   let s:magenta     = "5"
-"   let s:violet      = "5".s:bright
-"   let s:blue        = "4"
-"   let s:cyan        = "6"
-"   let s:green       = "2"
     let s:base03      = "DarkGray"      " 0*
     let s:base02      = "Black"         " 0
     let s:base01      = "LightGreen"    " 2*
@@ -368,7 +352,7 @@ endif
 "}}}
 " Background value based on termtrans setting "{{{
 " ---------------------------------------------------------------------
-if (has("gui_running") || g:solarized_termtrans == 0)
+if (has("gui_running") || g:solarizedbrown_termtrans == 0)
     let s:back        = s:base03
 else
     let s:back        = "NONE"
@@ -396,7 +380,7 @@ endif
 "}}}
 " Optional contrast schemes "{{{
 " ---------------------------------------------------------------------
-if g:solarized_contrast == "high"
+if g:solarizedbrown_contrast == "high"
     let s:base01      = s:base00
     let s:base00      = s:base0
     let s:base0       = s:base1
@@ -404,14 +388,14 @@ if g:solarized_contrast == "high"
     let s:base2       = s:base3
     let s:back        = s:back
 endif
-if g:solarized_contrast == "low"
+if g:solarizedbrown_contrast == "low"
     let s:back        = s:base02
     let s:ou          = ",underline"
 endif
 "}}}
 " Overrides dependent on user specified values and environment "{{{
 " ---------------------------------------------------------------------
-if (g:solarized_bold == 0 || &t_Co == 8 )
+if (g:solarizedbrown_bold == 0 || &t_Co == 8 )
     let s:b           = ""
     let s:bb          = ",bold"
 else
@@ -419,13 +403,13 @@ else
     let s:bb          = ""
 endif
 
-if g:solarized_underline == 0
+if g:solarizedbrown_underline == 0
     let s:u           = ""
 else
     let s:u           = ",underline"
 endif
 
-if g:solarized_italic == 0 || s:terminal_italic == 0
+if g:solarizedbrown_italic == 0 || s:terminal_italic == 0
     let s:i           = ""
 else
     let s:i           = ",italic"
@@ -599,10 +583,10 @@ exe "hi! Todo"           .s:fmt_bold   .s:fg_magenta.s:bg_none
 "}}}
 " Extended highlighting "{{{
 " ---------------------------------------------------------------------
-if      (g:solarized_visibility=="high")
+if      (g:solarizedbrown_visibility=="high")
     exe "hi! SpecialKey" .s:fmt_revr   .s:fg_red    .s:bg_none
     exe "hi! NonText"    .s:fmt_bold   .s:fg_red    .s:bg_none
-elseif  (g:solarized_visibility=="low")
+elseif  (g:solarizedbrown_visibility=="low")
     exe "hi! SpecialKey" .s:fmt_bold   .s:fg_base02 .s:bg_none
     exe "hi! NonText"    .s:fmt_bold   .s:fg_base02 .s:bg_none
 else
@@ -631,12 +615,12 @@ exe "hi! WarningMsg"     .s:fmt_bold   .s:fg_red    .s:bg_none
 exe "hi! WildMenu"       .s:fmt_none   .s:fg_base2  .s:bg_base02 .s:fmt_revbb
 exe "hi! Folded"         .s:fmt_undb   .s:fg_base0  .s:bg_base02  .s:sp_base03
 exe "hi! FoldColumn"     .s:fmt_none   .s:fg_base0  .s:bg_base02
-if      (g:solarized_diffmode=="high")
+if      (g:solarizedbrown_diffmode=="high")
 exe "hi! DiffAdd"        .s:fmt_revr   .s:fg_green  .s:bg_none
 exe "hi! DiffChange"     .s:fmt_revr   .s:fg_yellow .s:bg_none
 exe "hi! DiffDelete"     .s:fmt_revr   .s:fg_red    .s:bg_none
 exe "hi! DiffText"       .s:fmt_revr   .s:fg_blue   .s:bg_none
-elseif  (g:solarized_diffmode=="low")
+elseif  (g:solarizedbrown_diffmode=="low")
 exe "hi! DiffAdd"        .s:fmt_undr   .s:fg_green  .s:bg_none   .s:sp_green
 exe "hi! DiffChange"     .s:fmt_undr   .s:fg_yellow .s:bg_none   .s:sp_yellow
 exe "hi! DiffDelete"     .s:fmt_bold   .s:fg_red    .s:bg_none
@@ -972,12 +956,12 @@ hi! link pandocMetadataTitle             pandocMetadata
 "}}}
 " Utility autocommand "{{{
 " ---------------------------------------------------------------------
-" In cases where Solarized is initialized inside a terminal vim session and 
+" In cases where SolarizedBrown is initialized inside a terminal vim session and 
 " then transferred to a gui session via the command `:gui`, the gui vim process 
 " does not re-read the colorscheme (or .vimrc for that matter) so any `has_gui` 
 " related code that sets gui specific values isn't executed.
 "
-" Currently, Solarized sets only the cterm or gui values for the colorscheme 
+" Currently, SolarizedBrown sets only the cterm or gui values for the colorscheme 
 " depending on gui or terminal mode. It's possible that, if the following 
 " autocommand method is deemed excessively poor form, that approach will be 
 " used again and the autocommand below will be dropped.
@@ -991,29 +975,29 @@ autocmd GUIEnter * if (s:vmode != "gui") | exe "colorscheme " . g:colors_name | 
 "}}}
 " Highlight Trailing Space {{{
 " Experimental: Different highlight when on cursorline
-function! s:SolarizedHiTrail()
-    if g:solarized_hitrail==0
-        hi! clear solarizedTrailingSpace
+function! s:SolarizedBrownHiTrail()
+    if g:solarizedbrown_hitrail==0
+        hi! clear solarizedbrownTrailingSpace
     else
-        syn match solarizedTrailingSpace "\s*$"
-        exe "hi! solarizedTrailingSpace " .s:fmt_undr .s:fg_red .s:bg_none .s:sp_red
+        syn match solarizedbrownTrailingSpace "\s*$"
+        exe "hi! solarizedbrownTrailingSpace " .s:fmt_undr .s:fg_red .s:bg_none .s:sp_red
     endif
 endfunction  
-augroup SolarizedHiTrail
+augroup SolarizedBrownHiTrail
     autocmd!
-    if g:solarized_hitrail==1
-        autocmd! Syntax * call s:SolarizedHiTrail()
-        autocmd! ColorScheme * if g:colors_name == "solarized" | call s:SolarizedHiTrail() | else | augroup! s:SolarizedHiTrail | endif
+    if g:solarizedbrown_hitrail==1
+        autocmd! Syntax * call s:SolarizedBrownHiTrail()
+        autocmd! ColorScheme * if g:colors_name == "solarizedbrown" | call s:SolarizedBrownHiTrail() | else | augroup! s:SolarizedBrownHiTrail | endif
     endif
 augroup END
 " }}}
 " Menus "{{{
 " ---------------------------------------------------------------------
-" Turn off Solarized menu by including the following assignment in your .vimrc:
+" Turn off SolarizedBrown menu by including the following assignment in your .vimrc:
 "
-"    let g:solarized_menu=0
+"    let g:solarizedbrownbrown_menu=0
 
-function! s:SolarizedOptions()
+function! s:SolarizedBrownOptions()
     new "new buffer
     setf vim "vim filetype
     let failed = append(0, s:defaults_list)
@@ -1022,72 +1006,72 @@ function! s:SolarizedOptions()
     let failed = append(0, s:lazycat_list)
     0 "jump back to the top
 endfunction
-if !exists(":SolarizedOptions")
-    command SolarizedOptions :call s:SolarizedOptions()
+if !exists(":SolarizedBrownOptions")
+    command SolarizedBrownOptions :call s:SolarizedBrownOptions()
 endif
 
-function! SolarizedMenu()
-    if exists("g:loaded_solarized_menu")
+function! SolarizedBrownMenu()
+    if exists("g:loaded_solarizedbrownbrown_menu")
         try
-            silent! aunmenu Solarized
+            silent! aunmenu SolarizedBrown
         endtry
     endif
-    let g:loaded_solarized_menu = 1
+    let g:loaded_solarizedbrownbrown_menu = 1
 
-    if g:colors_name == "solarized" && g:solarized_menu != 0
+    if g:colors_name == "solarizedbrownbrown" && g:solarizedbrownbrown_menu != 0
 
-        amenu &Solarized.&Contrast.&Low\ Contrast        :let g:solarized_contrast="low"       \| colorscheme solarized<CR>
-        amenu &Solarized.&Contrast.&Normal\ Contrast     :let g:solarized_contrast="normal"    \| colorscheme solarized<CR>
-        amenu &Solarized.&Contrast.&High\ Contrast       :let g:solarized_contrast="high"      \| colorscheme solarized<CR>
-        an    &Solarized.&Contrast.-sep-                 <Nop>
-        amenu &Solarized.&Contrast.&Help:\ Contrast      :help 'solarized_contrast'<CR>
+        amenu &SolarizedBrown.&Contrast.&Low\ Contrast        :let g:solarizedbrownbrown_contrast="low"       \| colorscheme solarizedbrownbrown<CR>
+        amenu &SolarizedBrown.&Contrast.&Normal\ Contrast     :let g:solarizedbrownbrown_contrast="normal"    \| colorscheme solarizedbrownbrown<CR>
+        amenu &SolarizedBrown.&Contrast.&High\ Contrast       :let g:solarizedbrownbrown_contrast="high"      \| colorscheme solarizedbrownbrown<CR>
+        an    &SolarizedBrown.&Contrast.-sep-                 <Nop>
+        amenu &SolarizedBrown.&Contrast.&Help:\ Contrast      :help 'solarizedbrownbrown_contrast'<CR>
 
-        amenu &Solarized.&Visibility.&Low\ Visibility    :let g:solarized_visibility="low"     \| colorscheme solarized<CR>
-        amenu &Solarized.&Visibility.&Normal\ Visibility :let g:solarized_visibility="normal"  \| colorscheme solarized<CR>
-        amenu &Solarized.&Visibility.&High\ Visibility   :let g:solarized_visibility="high"    \| colorscheme solarized<CR>
-        an    &Solarized.&Visibility.-sep-                 <Nop>
-        amenu &Solarized.&Visibility.&Help:\ Visibility    :help 'solarized_visibility'<CR>
+        amenu &SolarizedBrown.&Visibility.&Low\ Visibility    :let g:solarizedbrownbrown_visibility="low"     \| colorscheme solarizedbrownbrown<CR>
+        amenu &SolarizedBrown.&Visibility.&Normal\ Visibility :let g:solarizedbrownbrown_visibility="normal"  \| colorscheme solarizedbrownbrown<CR>
+        amenu &SolarizedBrown.&Visibility.&High\ Visibility   :let g:solarizedbrownbrown_visibility="high"    \| colorscheme solarizedbrownbrown<CR>
+        an    &SolarizedBrown.&Visibility.-sep-                 <Nop>
+        amenu &SolarizedBrown.&Visibility.&Help:\ Visibility    :help 'solarizedbrownbrown_visibility'<CR>
 
-        amenu &Solarized.&Background.&Toggle\ Background :ToggleBG<CR>
-        amenu &Solarized.&Background.&Dark\ Background   :set background=dark  \| colorscheme solarized<CR>
-        amenu &Solarized.&Background.&Light\ Background  :set background=light \| colorscheme solarized<CR>
-        an    &Solarized.&Background.-sep-               <Nop>
-        amenu &Solarized.&Background.&Help:\ ToggleBG     :help togglebg<CR>
+        amenu &SolarizedBrown.&Background.&Toggle\ Background :ToggleBG<CR>
+        amenu &SolarizedBrown.&Background.&Dark\ Background   :set background=dark  \| colorscheme solarizedbrownbrown<CR>
+        amenu &SolarizedBrown.&Background.&Light\ Background  :set background=light \| colorscheme solarizedbrownbrown<CR>
+        an    &SolarizedBrown.&Background.-sep-               <Nop>
+        amenu &SolarizedBrown.&Background.&Help:\ ToggleBG     :help togglebg<CR>
 
-        if g:solarized_bold==0 | let l:boldswitch="On" | else | let l:boldswitch="Off" | endif
-        exe "amenu &Solarized.&Styling.&Turn\\ Bold\\ ".l:boldswitch." :let g:solarized_bold=(abs(g:solarized_bold-1)) \\| colorscheme solarized<CR>"
-        if g:solarized_italic==0 | let l:italicswitch="On" | else | let l:italicswitch="Off" | endif
-        exe "amenu &Solarized.&Styling.&Turn\\ Italic\\ ".l:italicswitch." :let g:solarized_italic=(abs(g:solarized_italic-1)) \\| colorscheme solarized<CR>"
-        if g:solarized_underline==0 | let l:underlineswitch="On" | else | let l:underlineswitch="Off" | endif
-        exe "amenu &Solarized.&Styling.&Turn\\ Underline\\ ".l:underlineswitch." :let g:solarized_underline=(abs(g:solarized_underline-1)) \\| colorscheme solarized<CR>"
+        if g:solarizedbrownbrown_bold==0 | let l:boldswitch="On" | else | let l:boldswitch="Off" | endif
+        exe "amenu &SolarizedBrown.&Styling.&Turn\\ Bold\\ ".l:boldswitch." :let g:solarizedbrownbrown_bold=(abs(g:solarizedbrownbrown_bold-1)) \\| colorscheme solarizedbrownbrown<CR>"
+        if g:solarizedbrownbrown_italic==0 | let l:italicswitch="On" | else | let l:italicswitch="Off" | endif
+        exe "amenu &SolarizedBrown.&Styling.&Turn\\ Italic\\ ".l:italicswitch." :let g:solarizedbrownbrown_italic=(abs(g:solarizedbrownbrown_italic-1)) \\| colorscheme solarizedbrownbrown<CR>"
+        if g:solarizedbrownbrown_underline==0 | let l:underlineswitch="On" | else | let l:underlineswitch="Off" | endif
+        exe "amenu &SolarizedBrown.&Styling.&Turn\\ Underline\\ ".l:underlineswitch." :let g:solarizedbrownbrown_underline=(abs(g:solarizedbrownbrown_underline-1)) \\| colorscheme solarizedbrownbrown<CR>"
 
-        amenu &Solarized.&Diff\ Mode.&Low\ Diff\ Mode    :let g:solarized_diffmode="low"     \| colorscheme solarized<CR>
-        amenu &Solarized.&Diff\ Mode.&Normal\ Diff\ Mode :let g:solarized_diffmode="normal"  \| colorscheme solarized<CR>
-        amenu &Solarized.&Diff\ Mode.&High\ Diff\ Mode   :let g:solarized_diffmode="high"    \| colorscheme solarized<CR>
+        amenu &SolarizedBrown.&Diff\ Mode.&Low\ Diff\ Mode    :let g:solarizedbrownbrown_diffmode="low"     \| colorscheme solarizedbrownbrown<CR>
+        amenu &SolarizedBrown.&Diff\ Mode.&Normal\ Diff\ Mode :let g:solarizedbrownbrown_diffmode="normal"  \| colorscheme solarizedbrownbrown<CR>
+        amenu &SolarizedBrown.&Diff\ Mode.&High\ Diff\ Mode   :let g:solarizedbrownbrown_diffmode="high"    \| colorscheme solarizedbrownbrown<CR>
 
-        if g:solarized_hitrail==0 | let l:hitrailswitch="On" | else | let l:hitrailswitch="Off" | endif
-        exe "amenu &Solarized.&Experimental.&Turn\\ Highlight\\ Trailing\\ Spaces\\ ".l:hitrailswitch." :let g:solarized_hitrail=(abs(g:solarized_hitrail-1)) \\| colorscheme solarized<CR>"
-        an    &Solarized.&Experimental.-sep-               <Nop>
-        amenu &Solarized.&Experimental.&Help:\ HiTrail    :help 'solarized_hitrail'<CR>
+        if g:solarizedbrownbrown_hitrail==0 | let l:hitrailswitch="On" | else | let l:hitrailswitch="Off" | endif
+        exe "amenu &SolarizedBrown.&Experimental.&Turn\\ Highlight\\ Trailing\\ Spaces\\ ".l:hitrailswitch." :let g:solarizedbrownbrown_hitrail=(abs(g:solarizedbrownbrown_hitrail-1)) \\| colorscheme solarizedbrownbrown<CR>"
+        an    &SolarizedBrown.&Experimental.-sep-               <Nop>
+        amenu &SolarizedBrown.&Experimental.&Help:\ HiTrail    :help 'solarizedbrownbrown_hitrail'<CR>
 
-        an    &Solarized.-sep1-                          <Nop>
+        an    &SolarizedBrown.-sep1-                          <Nop>
 
-        amenu &Solarized.&Autogenerate\ options          :SolarizedOptions<CR>
+        amenu &SolarizedBrown.&Autogenerate\ options          :SolarizedBrownOptions<CR>
 
-        an    &Solarized.-sep2-                          <Nop>
+        an    &SolarizedBrown.-sep2-                          <Nop>
 
-        amenu &Solarized.&Help.&Solarized\ Help          :help solarized<CR>
-        amenu &Solarized.&Help.&Toggle\ Background\ Help :help togglebg<CR>
-        amenu &Solarized.&Help.&Removing\ This\ Menu     :help solarized-menu<CR>
+        amenu &SolarizedBrown.&Help.&SolarizedBrown\ Help          :help solarizedbrownbrown<CR>
+        amenu &SolarizedBrown.&Help.&Toggle\ Background\ Help :help togglebg<CR>
+        amenu &SolarizedBrown.&Help.&Removing\ This\ Menu     :help solarizedbrownbrown-menu<CR>
 
-        an 9999.77 &Help.&Solarized\ Colorscheme         :help solarized<CR>
+        an 9999.77 &Help.&SolarizedBrown\ Colorscheme         :help solarizedbrownbrown<CR>
         an 9999.78 &Help.&Toggle\ Background             :help togglebg<CR>
         an 9999.79 &Help.-sep3-                          <Nop>
 
     endif
 endfunction
 
-autocmd ColorScheme * if g:colors_name != "solarized" | silent! aunmenu Solarized | else | call SolarizedMenu() | endif
+autocmd ColorScheme * if g:colors_name != "solarizedbrownbrown" | silent! aunmenu SolarizedBrown | else | call SolarizedBrownMenu() | endif
 
 "}}}
 " License "{{{
